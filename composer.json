@@ -1,0 +1,60 @@
+{
+    "name": "luceos/minis",
+    "description": "Mini extenders for Flarum",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "authors": [
+        {
+            "name": "Daniël Klabbers",
+            "email": "daniel@klabbers.email",
+            "homepage": "https://luceos.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/luceos/flarum-ext-minis/issues",
+        "source": "https://github.com/luceos/flarum-ext-minis",
+        "forum": "https://discuss.flarum.org/d/35283"
+    },
+    "autoload": {
+        "psr-4": {
+            "Luceos\\Minis\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Minis",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-glass-cheers",
+                "color": "#ff4800",
+                "backgroundColor": "#091320"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": false,
+                "js": false,
+                "jsCommon": false,
+                "css": false,
+                "locale": false,
+                "gitConf": true,
+                "githubActions": false,
+                "prettier": false,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": false
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
