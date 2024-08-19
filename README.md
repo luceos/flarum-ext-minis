@@ -26,6 +26,8 @@ composer update luceos/minis:"*"
 
 ### How to use
 
+> There's no need to enable this extension. Everything from this extension works "as is", as long as it's installed with composer.
+
 Inside your `extend.php` in the Flarum installation path you will see some lines, at the bottom you will find something like:
 
 ```php
