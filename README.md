@@ -2,7 +2,11 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/luceos/minis.svg)](https://packagist.org/packages/luceos/minis) [![Total Downloads](https://img.shields.io/packagist/dt/luceos/minis.svg)](https://packagist.org/packages/luceos/minis)
 
-A [Flarum](http://flarum.org) extension. Offers many little extenders to be used inside your `extend.php` in the root of your Flarum installation path (next to config.php and flarum files).
+A [Flarum](http://flarum.org) extension that is not really an extension. 
+
+Every Flarum installation comes with a file `extend.php` which allows you use any [Flarum extender](https://docs.flarum.org/extenders/) without creating a full-fledged extension. For the past several years I have been writing [several examples](https://github.com/luceos/flarum-extender-examples) to show people how to use this. I thought it wise to move some of these into their own extension so that you can use these extenders with less code.
+
+Your `extend.php` lives in the root installation path of Flarum, next to `config.php` and `flarum`.
 
 ## Installation
 
@@ -16,8 +20,6 @@ composer require luceos/minis:"*"
 
 ```sh
 composer update luceos/minis:"*"
-php flarum migrate
-php flarum cache:clear
 ```
 
 ## Extenders
