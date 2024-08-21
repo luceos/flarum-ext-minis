@@ -75,6 +75,25 @@ _Allow creating discussions only once every day in the tag with slug `advertisem
   new Luceos\Minis\Post\Formatting\AllowElement('iframe'),
 ```
 
+### Discussion - Http
+
+`Luceos\Minis\Discussion\Http\Redirection` - allows redirecting requests to certain discussions
+
+_Redirect any request to a path with words, dashes or numbers to be matched against a Discussion and redirected to it._
+```php
+  (new Luceos\Minis\Discussion\Http\Redirect(match: '~(?<slug>[\w\d-]{4,})~'))->fromSlug(),
+```
+
+**Note `fromSlug()` requires a capture group named `slug` in your regular expression!**
+
+_Redirect any request to a matched path to a specific path where we replace matches.
+```php
+  (new Luceos\Minis\Discussion\Http\Redirect(match: '~wordpress\/([0-9]+)\/(.*)~', to: '$1/$2', status: 301)),
+```
+
+- `match` requires a valid regular expression, check an online regular expression tester on how to use regular expressions: https://regex101.com/.
+- `to` optional argument to set a target for, you can use `$1` for the first matched capture group or use named capture groups as well
+
 ## Links
 
 - [Packagist](https://packagist.org/packages/luceos/minis)
